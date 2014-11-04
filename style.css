@@ -17,3 +17,11 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
+.admin-bar .navbar-fixed-top {
+    margin-top: 30px;
+}
+
+.current-menu-item > a {
+    background: black;
+}

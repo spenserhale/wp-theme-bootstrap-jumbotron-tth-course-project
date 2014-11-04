@@ -13,7 +13,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -27,15 +27,14 @@
 			<a class="navbar-brand" href="#">Project name</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			<form class="navbar-form navbar-right" role="form">
-				<div class="form-group">
-					<input type="text" placeholder="Email" class="form-control">
-				</div>
-				<div class="form-group">
-					<input type="password" placeholder="Password" class="form-control">
-				</div>
-				<button type="submit" class="btn btn-success">Sign in</button>
-			</form>
+			<?php
+			$defaults = array(
+				'theme_location'  => 'header-menu',
+				'container'       => false,
+				'menu_class'      => 'nav navbar-nav'
+			);
+			wp_nav_menu( $defaults );
+			?>
 		</div><!--/.navbar-collapse -->
 	</div>
 </nav>
